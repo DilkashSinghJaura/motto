@@ -8,23 +8,34 @@
             </a>
         </div>
 
-        <div class="nav-center">
+        <div class="nav-center" [class.mobile-open]="menuOpen">
+
             <ul class="nav-links">
-                <li><a routerLink="/tasks" >Tasks</a></li>
-                <li><a routerLink="/calendar">Calendar</a></li>
-                <li><a routerLink="/projects">Projects</a></li>
-                <li><a routerLink="/teams">Teams</a></li>
-                <li><a routerLink="/reports">Reports</a></li>
-                <li><a routerLink="/about-us">About us</a></li>
-                <li><a routerLink="/support">Support</a></li>
+                @for (item of navItems; track item.route) {
+                <li>
+                    <a [routerLink]="item.route">
+                        {{ item.label }}
+                    </a>
+                </li>
+                }
             </ul>
+
         </div>
 
 
         <div class="nav-right">
+
             <a class="profile-btn" routerLink="/profile">
                 <img src="assets/profile.svg" alt="Profile">
             </a>
+
+            <a class="menu-btn">
+                <button type="button" (click)="toggleMenu()" aria-label="Menu">
+                    <img src="assets/menu.svg" alt="Menu">
+                </button>
+            </a>
+
+
         </div>
 
     </div>
