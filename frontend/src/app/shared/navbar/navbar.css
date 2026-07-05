@@ -1,0 +1,250 @@
+/* GLOBAL */
+a {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    background: rgba(251, 251, 253, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1000;
+}
+
+.navbar * {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* MAIN NAV CONTAINER */
+
+.nav-container {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+/* LEFT */
+.nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-left a {
+    transition: color 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "Manrope", sans-serif;
+}
+
+.nav-left img {
+    width: 15px;
+    height: 15px;
+    display: flex;
+}
+
+.nav-left a:hover {
+    cursor: pointer;
+}
+
+/* CENTER */
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 60px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* border: 1px solid black; */
+
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-links a:hover {
+    cursor: pointer;
+}
+
+/* RIGHT */
+
+.nav-right {
+    justify-self: center;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.profile-btn {
+    width: 40px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color .2s ease;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+.menu-btn img {
+    display: none;
+    width: 20px;
+    height: 23px;
+
+    border: none;
+    background: transparent;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    color: black;
+}
+
+.menu-btn button {
+    display: none;
+}
+
+.profile-btn img {
+    height: 18px;
+    display: flex;
+    transition: opacity .2s ease;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        height: 44px;
+        position: sticky;
+    }
+
+    .nav-container {
+        grid-template-columns: auto 1fr auto;
+        padding: 0 10px;
+        height: 100%;
+    }
+
+    /* Logo */
+
+    .nav-left {
+        justify-self: start;
+        justify-content: flex-start;
+    }
+
+    /* Hide menu by default */
+
+    .nav-center {
+        display: none;
+    }
+
+    /* Show menu when hamburger is clicked */
+
+    .nav-center.mobile-open {
+        display: block;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        width: 100%;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        z-index: 999;
+    }
+
+    .nav-center.mobile-open .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+        padding: 8px 0;
+        height: auto;
+        justify-content: center;
+    }
+
+    .nav-center.mobile-open .nav-links li {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .nav-center.mobile-open .nav-links a {
+        /* display: block; */
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 15px;
+        justify-content: center;
+    }
+
+    .nav-center.mobile-open .nav-links a:hover {
+        background: #f5f5f7;
+    }
+
+    /* Right side */
+
+    .nav-right {
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        gap: 1px;
+    }
+
+    .profile-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-btn img {
+        display: flex;
+    }
+
+    .menu-btn button {
+        display: flex;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+    }
+}
