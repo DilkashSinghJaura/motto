@@ -3,7 +3,13 @@
     [class.primary]="variant === 'primary'"
     [class.secondary]="variant === 'secondary'"
     [class.danger]="variant === 'danger'"
-    [disabled]="disabled">
+
+    [class.small]="size === 'small'"
+    [class.medium]="size === 'medium'"
+    [class.large]="size === 'large'"
+
+    [disabled]="disabled"
+    >
 
     {{ text }}
 
