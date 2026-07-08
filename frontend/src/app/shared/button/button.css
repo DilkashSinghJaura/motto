@@ -1,0 +1,98 @@
+button {
+    all: unset;
+    box-sizing: border-box;
+}
+
+.app-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 100px;
+    height: 48px;
+
+    padding: 0 28px;
+
+    border-radius: 70px;
+
+    font-family: "SF Pro Text", "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background-color .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.app-btn.small {
+    height: 35px;
+    min-width: 100px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.app-btn.medium {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* Primary */
+
+.primary {
+    background: white;
+    color: black;
+}
+
+
+.primary:active {
+    transform: scale(.98);
+}
+
+/* Secondary */
+
+.secondary {
+    background: none;
+    color: white;
+    border: 1px solid #d2d2d7;
+}
+
+.secondary:hover {
+    background: black;
+    border: 1px solid black;
+    color: white;
+}
+
+
+/* Danger */
+
+.danger {
+    background: #ff3b30;
+    color: white;
+}
+
+.danger:hover {
+    background: #e0342a;
+    transform: translateY(-2px);
+}
+
+.danger:active {
+    transform: scale(.98);
+}
+
+/* Disabled */
+
+.app-btn:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}

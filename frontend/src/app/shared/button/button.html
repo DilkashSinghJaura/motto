@@ -1,0 +1,16 @@
+<button
+    class="app-btn"
+    [class.primary]="variant === 'primary'"
+    [class.secondary]="variant === 'secondary'"
+    [class.danger]="variant === 'danger'"
+
+    [class.small]="size === 'small'"
+    [class.medium]="size === 'medium'"
+    [class.large]="size === 'large'"
+
+    [disabled]="disabled"
+    >
+
+    {{ text }}
+
+</button>

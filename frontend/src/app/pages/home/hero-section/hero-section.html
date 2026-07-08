@@ -1,0 +1,29 @@
+<section class="hero" [style.background-image]="backgroundImage ? 'url(' + backgroundImage + ')' : null">
+
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            {{ tag }}
+        </span>
+
+        <h1 [innerHTML]="title"></h1>
+
+        <p>
+            {{ description }}
+        </p>
+
+        <div class="hero-buttons">
+
+            <app-button [text]="primaryButtonText" variant="primary">
+            </app-button>
+
+            <app-button [text]="secondaryButtonText" variant="secondary">
+            </app-button>
+
+        </div>
+
+    </div>
+
+</section>
