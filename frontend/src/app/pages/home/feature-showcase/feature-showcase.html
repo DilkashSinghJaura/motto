@@ -1,0 +1,46 @@
+<section class="feature-showcase" [style.background-image]="backgroundImage ? 'url(' + backgroundImage + ')' : null">
+
+    @if (!backgroundImage) {
+    <div class="feature-showcase-bg"></div>
+    }
+
+    <div class="feature-showcase-left" [style.background-image]="leftImage ? 'url(' + leftImage + ')' : null">
+
+        @if (!leftImage) { <div class="feature-card-bg"></div> }
+
+        <div class="showcase-content">
+
+            <h1 class="title"> {{ featureShowcaseLeftTitle }} </h1>
+            <p class="subtext"> {{ featureShowcaseLeftContent }} </p>
+
+            <div class="buttons">
+
+                <app-button [text]="primaryLeftButtonText" variant="primary" size="small"></app-button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="feature-showcase-right" [style.background-image]="rightImage ? 'url(' + rightImage + ')' : null">
+
+        @if (!rightImage) { <div class="feature-card-bg"></div> }
+
+
+        <div class="showcase-content">
+
+            <h1 class="title"> {{ featureShowcaseRightTitle }} </h1>
+            <p class="subtext"> {{ featureShowcaseRightContent }} </p>
+
+            <div class="buttons">
+
+                <app-button [text]="primaryRightButtonText" variant="primary" size="small"></app-button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

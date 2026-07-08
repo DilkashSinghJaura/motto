@@ -1,32 +1,25 @@
-<section class="hero">
+<section class="hero" [style.background-image]="backgroundImage ? 'url(' + backgroundImage + ')' : null">
 
     <div class="hero-bg"></div>
 
     <div class="hero-content">
 
         <span class="hero-tag">
-            Built for deep focus
+            {{ tag }}
         </span>
 
-        <h1>
-            Your thoughts.
-            <br>
-            Beautifully 
-            Organized.
-        </h1>
+        <h1 [innerHTML]="title"></h1>
 
         <p>
-            A minimal task manager that lets you focus on what matters,
-            clear your mind, and accomplish more—without distractions.
+            {{ description }}
         </p>
 
         <div class="hero-buttons">
 
-            <app-button text="Start Planning" variant="primary" routerLink="/tasks">
+            <app-button [text]="primaryButtonText" variant="primary">
             </app-button>
 
-
-            <app-button text="Learn More" variant="secondary" routerLink="/about">
+            <app-button [text]="secondaryButtonText" variant="secondary">
             </app-button>
 
         </div>

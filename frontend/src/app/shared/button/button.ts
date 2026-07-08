@@ -12,6 +12,10 @@ export class Button {
 
   @Input() variant: 'primary' | 'secondary' | 'danger' = 'primary';
 
+  @Input() size: 'small' | 'medium' | 'large' = 'medium';
+
   @Input() disabled = false;
+
+  @Input() routerLink = '';
 
 }
