@@ -16,7 +16,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    font-family: "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
@@ -91,7 +90,6 @@
 
     color: white;
 
-    font-family: "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: clamp(20px, 3vw, 40px);
     font-weight: 500;
     margin : 0;
@@ -102,7 +100,6 @@
 .subtext {
 
     color: white;
-    font-family: "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: clamp(15px, 3vw, 23px);
     font-weight: 300;
 
